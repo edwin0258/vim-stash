@@ -1,4 +1,17 @@
+" Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'nightsense/vimspectr'
+Plug 'junegunn/vader.vim'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'valloric/youcompleteme' " updated Vim version needed
+call plug#end()
+
 syntax on
+
+set nocompatible
+
 set background=dark
 
 let g:gruvbox_italic=0
@@ -19,7 +32,7 @@ set ruler
 set showcmd
 filetype plugin indent on
 set wildmenu
-set showmatch " highlight matching parens ect..
+" set showmatch " highlight matching parens ect..
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
 
@@ -33,3 +46,5 @@ set foldnestmax=10 " 10 nested fold max
 " space open/closes folds
 nnoremap <space> za
 set foldmethod=indent " fold based on indent level
+set lazyredraw
+
