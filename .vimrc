@@ -24,6 +24,7 @@ let g:gruvbox_contrast_light='hard'
 colorscheme gruvbox
 
 set number
+set relativenumber
 set autoindent
 set smartindent
 
