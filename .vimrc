@@ -4,7 +4,9 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'nightsense/vimspectr'
 Plug 'junegunn/vader.vim'
+Plug 'junegunn/seoul256.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'phanviet/vim-monokai-pro'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -18,10 +20,12 @@ syntax on
 
 set background=dark
 
-let g:gruvbox_italic=0
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_contrast_light='hard'
-colorscheme gruvbox
+"let g:gruvbox_italic=0
+"let g:gruvbox_contrast_dark='hard'
+"let g:gruvbox_contrast_light='hard'
+"colorscheme gruvbox
+set termguicolors
+color monokai_pro
 
 set number
 set relativenumber
@@ -44,7 +48,7 @@ set hlsearch " highlight matches
 set backspace=2 " Make backspace work list most other programs
 
 " turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR> 
+nnoremap <leader><space> :nohlsearch<CR>
 " a.k.a \<space>
 set foldenable " enable code folding
 set foldlevelstart=10 " open most folds by default
@@ -67,11 +71,13 @@ map <C-n> :NERDTreeToggle<CR>
 " Background toggling function
 func! BackgroundToggle()
     if (&background == "dark")
-        :MyColorscheme PaperColor
+        " :MyColorscheme PaperColor
+        :MyColorscheme seoul256
         set background=light
     else
         set background=dark
-        :MyColorscheme gruvbox
+        " :MyColorscheme gruvbox
+        :MyColorscheme monokai_pro
     endif
 endfunc
 
