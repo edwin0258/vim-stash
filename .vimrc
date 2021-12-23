@@ -46,6 +46,7 @@ set wildmenu
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
 set backspace=2 " Make backspace work list most other programs
+set belloff=all
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
